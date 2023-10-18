@@ -65,6 +65,15 @@ namespace HR_project
             {
                 Console.WriteLine("Employee not found!");
             }
+
+        }
+        public void deleteEmployee(int Id)
+        {
+            Employee employee = employees.Find(x => x.Id == Id);
+            if (employee != null)
+            {
+                employees.Remove(employee);
+            }
         }
     }
 }
